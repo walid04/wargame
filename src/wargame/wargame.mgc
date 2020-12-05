@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="wargame.ISoldat.TypesM" x="689" y="22">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="wargame.Soldat" x="675" y="449">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.Element"/>
+        <Extension destinationClassName="wargame.ISoldat"/>
+        <Association destinationClassName="wargame.Carte"
+            endpointName="carte" kind="Simple"/>
+        <Communication destinationClassName="wargame.Position"/>
+        <Communication destinationClassName="wargame.Carte"/>
+    </Class>
+    <Class name="wargame.Heros" x="624" y="662">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.Soldat"/>
+        <Association destinationClassName="wargame.ISoldat.TypesH"
+            endpointName="TYPE" kind="Simple"/>
+        <Communication destinationClassName="wargame.ISoldat.TypesH"/>
+    </Class>
+    <Class name="wargame.FenetreJeu" x="35" y="686">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.IConfig"/>
+    </Class>
+    <Class name="wargame.Obstacle.TypeObstacle" x="1248" y="351">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="wargame.PanneauJeu" x="195" y="453">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.IConfig"/>
+        <Association destinationClassName="wargame.Carte"
+            endpointName="carte" kind="Simple"/>
+        <Association destinationClassName="wargame.Position"
+            endpointName="pos" kind="Simple"/>
+        <Association destinationClassName="wargame.Position"
+            endpointName="pos2" kind="Simple"/>
+        <Communication destinationClassName="wargame.Heros"/>
+        <Communication destinationClassName="wargame.Position"/>
+        <Communication destinationClassName="wargame.Carte"/>
+    </Class>
+    <Class name="wargame.Monstre" x="900" y="667">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.Soldat"/>
+        <Association destinationClassName="wargame.ISoldat.TypesM"
+            endpointName="TYPE" kind="Simple"/>
+        <Communication destinationClassName="wargame.ISoldat.TypesM"/>
+    </Class>
+    <Class name="wargame.ISoldat.TypesH" x="425" y="18">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="wargame.ISoldat" x="587" y="7">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="wargame.ISoldat.TypesM"/>
+        <Communication destinationClassName="wargame.ISoldat.TypesH"/>
+    </Class>
+    <Class name="wargame.ICarte" x="1090" y="8">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="wargame.Obstacle" x="1095" y="676">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.Element"/>
+        <Association
+            destinationClassName="wargame.Obstacle.TypeObstacle"
+            endpointName="TYPE" kind="Simple"/>
+        <Communication destinationClassName="wargame.Obstacle.TypeObstacle"/>
+    </Class>
+    <Class name="wargame.Carte" x="945" y="103">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.ICarte"/>
+        <Extension destinationClassName="wargame.IConfig"/>
+        <Association destinationClassName="wargame.Element"
+            endpointName="grille[][]" kind="Simple"/>
+        <Communication destinationClassName="wargame.ISoldat.TypesM"/>
+        <Communication destinationClassName="wargame.Soldat"/>
+        <Communication destinationClassName="wargame.Element"/>
+        <Communication destinationClassName="wargame.Heros"/>
+        <Communication destinationClassName="wargame.Position"/>
+        <Communication destinationClassName="wargame.Obstacle.TypeObstacle"/>
+        <Communication destinationClassName="wargame.Monstre"/>
+        <Communication destinationClassName="wargame.ISoldat.TypesH"/>
+        <Communication destinationClassName="wargame.Obstacle"/>
+    </Class>
+    <Class name="wargame.Element" x="998" y="407">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="wargame.Position"
+            endpointName="pos" kind="Simple"/>
+    </Class>
+    <Class name="wargame.Position" x="320" y="263">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="wargame.IConfig"/>
+    </Class>
+    <Class name="wargame.IConfig" x="18" y="13">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
