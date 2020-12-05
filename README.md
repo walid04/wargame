@@ -1,2 +1,1 @@
-# wargame
-Wargame
+# Wargame
